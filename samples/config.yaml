@@ -4,29 +4,42 @@ settings:
     default_tick: 10
 
 colors:
-    black: '#000000'
-    white: '#FFFFFF'
-    grey: '#DDDDDD'
-    blue: '#0000FF'
-    red:  '#FF0000'
-    lightred: '#AA0000'
+    black: #073642
+    grey: #002b36
+    red: #dc322f
+    lightred: #cb4b16
+    green: #859900
+    lightgreen: #586e75
+    yellow: #b58900
+    lightyellow: #657b83
+    blue: #268bd2
+    lightblue: #839496
+    magenta: #d33682
+    lightmagenta: #6c71c4
+    cyan: #2aa198
+    lightcyan: #93a1a1
+    #white: #eee8d5
+    white: #fdf6e3
 
 styles:
     default:
-        background: black
         foreground: white
-    classic:
+        background: black
+    flashy:
         foreground: black
-        background: blue
+        background: green
+    light:
+        foreground: white
+        background: grey
     urgent:
-        foreground: black
-        background: lightred
+        foreground: white
+        background: red
     disabled:
         foreground: grey
         background: black
     monitoring:
-        foreground: blue
-        background: black
+        foreground: black
+        background: blue
     monitoring_urgent:
         foreground: black
         background: red
@@ -39,9 +52,25 @@ separators:
     right_light: 
 
 icons:
-    clock: Õ
-    sound: Ô
-    window: ß
+    clock: É
+    cpu: Ñ
+    memory: Î
+    download: Ú
+    upload: Û
+    vol: Å
+    hdd: ¦
+    home: Æ
+    mail: Ì
+    chat: ©
+    music: ê
+    window: ¿
+    contact: Á
+    workspace: ö
+    wlan: ­
+    batt-empty: î
+    batt-charging: ï
+    batt-full: ð
+    heat: ±
 
 plugins:
 
@@ -63,7 +92,7 @@ plugins:
                 command: date '%a %d %b %Y'
                 icon: clock
                 nice: 20
-                style: classic
+                style: flashy
 
         volume:
             plugin: volume
@@ -73,12 +102,12 @@ plugins:
                 card: 0
 
         spacer:
-            plugin: spacer,
+            plugin: spacer
             tick: 0
             options:
                 class: classic
                 widescreen: true
-                text: My powered lemonbar
+                text: ~
 
         conky:
             plugin: conky
