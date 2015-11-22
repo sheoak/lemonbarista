@@ -2,6 +2,7 @@
 # out simple text to console
 
 # TODO: parameters
+# http://www.linuxquestions.org/questions/linux-software-2/conky-question-how-can-you-pass-conky-variables-to-scripts-4175443380/
 
 background no
 update_interval 2
@@ -16,27 +17,32 @@ format_human_readable true
 cpu_avg_samples 2
 
 TEXT
-time:
-    icon: time
-    style: flashy
-    text: ${time %a %d %b %H:%M}
+
+mpd:
+    icon: music
+    text: ${mpd_title}
+
 cpu:
     icon: cpu
+    group: system
     text: ${cpu}
     style: light
+
 memory:
     icon: memory
+    group: system
     text: ${mem}
+
 hdd:
     icon: hdd
     style: flashy
     group: disk
     text: ${fs_used_perc /}
+
 home:
     icon: home
     group: disk
     text: ${fs_used_perc /home}
-
 
 ${if_up wlan0}
 
@@ -90,11 +96,14 @@ eth-ip:
 
 ${endif}
 
-
 battery:
     icon: battery
     text: ${battery_percent}
 
-mpd:
-    icon: music
-    text: ${mpd_title}
+date:
+    icon: date
+    text: ${time %a %d %b}
+
+time:
+    style: flashy
+    text: ${time %H:%M}
