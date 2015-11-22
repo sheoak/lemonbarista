@@ -105,6 +105,11 @@ plugins:
                 eth: eth2
                 wlan: wlan0
 
+        battery:
+            plugin: battery
+            options:
+                hidefull: 1
+
         date:
             plugin: command
             tick: 60
