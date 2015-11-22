@@ -2,7 +2,6 @@
 
 A tool to easily feed LemonBar with a powerline style.
 
-
 # Requirements
 
 lemonbarista is written in Python3.4, and should work since Python3.3.
