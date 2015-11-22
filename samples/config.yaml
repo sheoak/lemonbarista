@@ -84,15 +84,6 @@ plugins:
             icon: window
 
     right:
-        hour:
-            plugin: command
-            tick: 60
-            icon: clock
-            style: flashy
-            options:
-                command: date '%a %d %b %Y'
-                nice: 20
-
         volume:
             plugin: volume
             signal: 1
@@ -113,4 +104,21 @@ plugins:
             options:
                 eth: eth2
                 wlan: wlan0
+
+        date:
+            plugin: command
+            tick: 60
+            icon: clock
+            options:
+                name: date
+                command: date '%a %d %b %Y'
+
+        time:
+            plugin: command
+            tick: 2
+            style: flashy
+            options:
+                name: time
+                command: date '%H:%M'
+
 
