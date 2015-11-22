@@ -33,12 +33,12 @@ file (in YAML for this exemple):
         default_tick: 10
 
     colors:
-        black: #000000
-        white: #FFFFFF
-        grey: #DDDDDD
-        blue: #0000FF
-        red:  #FF0000
-        lightred: #AA0000
+        black: '#000000'
+        white: '#FFFFFF'
+        grey: '#DDDDDD'
+        blue: '#0000FF'
+        red:  '#FF0000'
+        lightred: '#AA0000'
 
     styles:
         default:
