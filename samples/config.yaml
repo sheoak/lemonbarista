@@ -1,0 +1,88 @@
+settings:
+    font: -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1
+    icon_font: -xos4-terminusicons2mono-medium-r-normal--12-120-72-72-m-60-iso8859-1
+    default_tick: 10
+
+colors:
+    black: '#000000'
+    white: '#FFFFFF'
+    grey: '#DDDDDD'
+    blue: '#0000FF'
+    red:  '#FF0000'
+    lightred: '#AA0000'
+
+styles:
+    default:
+        background: black
+        foreground: white
+    classic:
+        foreground: black
+        background: blue
+    urgent:
+        foreground: black
+        background: lightred
+    disabled:
+        foreground: grey
+        background: black
+    monitoring:
+        foreground: blue
+        background: black
+    monitoring_urgent:
+        foreground: black
+        background: red
+        separator: black
+
+separators:
+    left: 
+    left_light: 
+    right: 
+    right_light: 
+
+icons:
+    clock: Õ
+    sound: Ô
+    window: ß
+
+plugins:
+
+    left:
+        workspaces:
+            plugin: i3-workspaces
+
+        window:
+            plugin: window
+            truncate: 20
+            options:
+                icon: window
+
+    right:
+        hour:
+            plugin: command
+            tick: 60
+            options:
+                command: date '%a %d %b %Y'
+                icon: clock
+                nice: 20
+                style: classic
+
+        volume:
+            plugin: volume
+            signal: 1
+            options:
+                icon: sound
+                card: 0
+
+        spacer:
+            plugin: spacer,
+            tick: 0
+            options:
+                class: classic
+                widescreen: true
+                text: My powered lemonbar
+
+        conky:
+            plugin: conky
+            options:
+                eth: eth2
+                wlan: wlan0
+

@@ -1,0 +1,103 @@
+{
+    "settings": {
+        "default_tick": 10,
+        "font": "-xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1",
+        "icon_font": "-xos4-terminusicons2mono-medium-r-normal--12-120-72-72-m-60-iso8859-1"
+    },
+    "icons": {
+        "sound": "\u00d4",
+        "window": "\u00df",
+        "clock": "\u00d5"
+    },
+    "colors": {
+        "white": "#FFFFFF",
+        "lightred": "#AA0000",
+        "grey": "#DDDDDD",
+        "black": "#000000",
+        "blue": "#0000FF",
+        "red": "#FF0000"
+    },
+    "separators": {
+        "left_light": "\ue0b3",
+        "left": "\ue0b2",
+        "right": "\ue0b0",
+        "right_light": "\ue0b1"
+    },
+    "styles": {
+        "disabled": {
+            "foreground": "grey",
+            "background": "black"
+        },
+        "classic": {
+            "foreground": "black",
+            "background": "blue"
+        },
+        "monitoring": {
+            "foreground": "blue",
+            "background": "black"
+        },
+        "default": {
+            "foreground": "white",
+            "background": "black"
+        },
+        "urgent": {
+            "foreground": "black",
+            "background": "lightred"
+        },
+        "monitoring_urgent": {
+            "separator": "black",
+            "foreground": "black",
+            "background": "red"
+        }
+    },
+    "plugins": {
+        "left": {
+            "workspaces": {
+                "plugin": "i3-workspaces"
+            },
+            "window": {
+                "plugin": "window",
+                "options": {
+                    "icon": "window"
+                },
+                "truncate": 20
+            }
+        },
+        "right": {
+            "hour": {
+                "tick": 60,
+                "plugin": "command",
+                "options": {
+                    "nice": 20,
+                    "icon": "clock",
+                    "command": "date '%a %d %b %Y'",
+                    "style": "classic"
+                }
+            },
+            "volume": {
+                "signal": 1,
+                "plugin": "volume",
+                "options": {
+                    "icon": "sound",
+                    "card": 0
+                }
+            },
+            "conky": {
+                "plugin": "conky",
+                "options": {
+                    "eth": "eth2",
+                    "wlan": "wlan0"
+                }
+            },
+            "spacer": {
+                "tick": 0,
+                "plugin": "spacer,",
+                "options": {
+                    "text": "My powered lemonbar",
+                    "style": "classic",
+                    "widescreen": true
+                }
+            }
+        }
+    },
+}
