@@ -81,31 +81,30 @@ plugins:
         window:
             plugin: window
             truncate: 20
-            options:
-                icon: window
+            icon: window
 
     right:
         hour:
             plugin: command
             tick: 60
+            icon: clock
+            style: flashy
             options:
                 command: date '%a %d %b %Y'
-                icon: clock
                 nice: 20
-                style: flashy
 
         volume:
             plugin: volume
             signal: 1
+            icon: sound
             options:
-                icon: sound
                 card: 0
 
         spacer:
             plugin: spacer
             tick: 0
+            style: default
             options:
-                class: classic
                 widescreen: true
                 text: ~
 
