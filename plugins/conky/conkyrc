@@ -1,0 +1,100 @@
+# Conky for external bar 
+# out simple text to console
+
+# TODO: parameters
+
+background no
+update_interval 2
+total_run_times 0
+override_utf8_locale yes
+short_units yes
+uppercase no
+out_to_console yes
+out_to_x no
+if_up_strictness address
+format_human_readable true
+cpu_avg_samples 2
+
+TEXT
+time:
+    icon: time
+    style: flashy
+    text: ${time %a %d %b %H:%M}
+cpu:
+    icon: cpu
+    text: ${cpu}
+    style: light
+memory:
+    icon: memory
+    text: ${mem}
+hdd:
+    icon: hdd
+    style: flashy
+    group: disk
+    text: ${fs_used_perc /}
+home:
+    icon: home
+    group: disk
+    text: ${fs_used_perc /home}
+
+
+${if_up wlan0}
+
+wlan-up:
+    icon: wlanup
+    group: network
+    text: ${upspeedf wlan0}
+
+wlan-down:
+    icon: wlandown
+    group: network
+    text: ${downspeedf wlan0}
+
+wlan-essid:
+    icon: wlan
+    group: network
+    text: ${wireless_essid wlan0}
+
+${else}
+
+wlan-essid:
+    icon: wlan-off
+    group: network
+    style: warn
+
+${endif}
+
+
+${if_up eth2}
+
+eth-down:
+    icon: ethdown
+    group: network
+    text: ${downspeedf eth2}
+
+eth-up:
+    icon: ethdup
+    group: network
+    text: ${upspeedf eth2}
+
+eth-ip:
+    icon: ethernet
+    group: network
+    text: ${addr eth2}
+
+${else}
+
+eth-ip:
+    icon: ethernet-off
+    group: network
+
+${endif}
+
+
+battery:
+    icon: battery
+    text: ${battery_percent}
+
+mpd:
+    icon: music
+    text: ${mpd_title}
