@@ -95,15 +95,3 @@ eth-ip:
     group: network
 
 ${endif}
-
-battery:
-    icon: battery
-    text: ${battery_percent}
-
-date:
-    icon: date
-    text: ${time %a %d %b}
-
-time:
-    style: flashy
-    text: ${time %H:%M}
