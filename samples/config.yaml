@@ -110,12 +110,15 @@ plugins:
             options:
                 hidefull: 1
 
+        keyboard:
+            plugin: keyboard
+            tick: 15
+
         date:
             plugin: command
             tick: 60
             icon: clock
             options:
-                name: date
                 command: date '%a %d %b %Y'
 
         time:
@@ -123,7 +126,6 @@ plugins:
             tick: 2
             style: flashy
             options:
-                name: time
                 command: date '%H:%M'
 
 
