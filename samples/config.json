@@ -91,7 +91,7 @@
             },
             "spacer": {
                 "tick": 0,
-                "plugin": "spacer,",
+                "plugin": "spacer",
                 "options": {
                     "text": "My powered lemonbar",
                     "style": "classic",
@@ -99,5 +99,5 @@
                 }
             }
         }
-    },
+    }
 }
