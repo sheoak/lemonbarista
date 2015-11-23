@@ -30,5 +30,6 @@ res=`eval $cmd`
 
 cat <<EOF
 $name:
-    text: $res
+    text: >
+        $res
 EOF
