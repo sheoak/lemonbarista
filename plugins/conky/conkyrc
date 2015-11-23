@@ -28,22 +28,6 @@ cpu:
     text: ${cpu}
     style: light
 
-memory:
-    icon: memory
-    group: system
-    text: ${mem}
-
-hdd:
-    icon: hdd
-    style: flashy
-    group: disk
-    text: ${fs_used_perc /}
-
-home:
-    icon: home
-    group: disk
-    text: ${fs_used_perc /home}
-
 ${if_up wlan0}
 
 wlan-up:
