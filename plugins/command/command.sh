@@ -28,5 +28,7 @@ fi
 
 res=`eval $cmd`
 
-echo "$name:"
-echo "    text: $res"
+cat <<EOF
+$name:
+    text: $res
+EOF

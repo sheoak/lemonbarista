@@ -1,4 +1,5 @@
 #! /bin/bash
+# based on https://github.com/electro7/dotfiles/tree/master/.i3/lemonbar
 fifo="/tmp/window_${USER}"
 
 [ -e "${fifo}" ] && rm "${fifo}"
@@ -12,6 +13,10 @@ barista_out()
     title=$(xprop -id $1 | awk '/_NET_WM_NAME/{$1=$2="";print}' | cut -d'"' -f2)
     echo "window:"
     echo "    text: $title"
+    cat <<EOF
+window:
+    text: $title
+EOF
 }
 
 while :; do

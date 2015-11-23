@@ -40,7 +40,10 @@ case "${status}" in
         ;;
 esac
 
-echo "battery:"
-echo "    icon: $icon"
-printf "    text: %.0f%%\n" $charge
+charge=`printf "%.0f%%\n" $charge`
 
+cat <<EOF
+battery:
+    icon: $icon
+    text: $charge
+EOF
