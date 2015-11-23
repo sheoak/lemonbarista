@@ -1,0 +1,107 @@
+settings:
+    font: -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1
+    icon_font: -xos4-terminusicons2mono-medium-r-normal--12-120-72-72-m-60-iso8859-1
+    default_tick: 10
+
+colors:
+    black: #073642
+    grey: #002b36
+    red: #dc322f
+    lightred: #cb4b16
+    green: #859900
+    lightgreen: #586e75
+    yellow: #b58900
+    lightyellow: #657b83
+    blue: #268bd2
+    lightblue: #839496
+    magenta: #d33682
+    lightmagenta: #6c71c4
+    cyan: #2aa198
+    lightcyan: #93a1a1
+    #white: #eee8d5
+    white: #fdf6e3
+
+styles:
+    default:
+        foreground: white
+        background: black
+    flashy:
+        foreground: black
+        background: green
+    light:
+        foreground: white
+        background: grey
+    urgent:
+        foreground: white
+        background: red
+    disabled:
+        foreground: grey
+        background: black
+    monitoring:
+        foreground: black
+        background: blue
+    monitoring_urgent:
+        foreground: black
+        background: red
+        separator: black
+
+separators:
+    left: 
+    left_light: 
+    right: 
+    right_light: 
+
+icons:
+    clock: É
+    cpu: Ñ
+    memory: Î
+    download: Ú
+    upload: Û
+    vol: Å
+    hdd: ¦
+    home: Æ
+    mail: Ì
+    chat: ©
+    music: ê
+    window: ¿
+    contact: Á
+    workspace: ö
+    wlan: ­
+    batt-empty: î
+    batt-charging: ï
+    batt-full: ð
+    heat: ±
+
+plugins:
+
+    left:
+        window:
+            plugin: window
+            truncate: 20
+            icon: window
+
+    right:
+
+        battery:
+            plugin: battery
+            icon: battery
+
+        keyboard:
+            plugin: keyboard
+            tick: 15
+
+        date:
+            plugin: command
+            tick: 60
+            icon: clock
+            options:
+                command: date '%a %d %b %Y'
+
+        time:
+            plugin: command
+            tick: 2
+            style: flashy
+            options:
+                command: date '%H:%M'
+
+
