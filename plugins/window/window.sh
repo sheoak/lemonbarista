@@ -11,11 +11,10 @@ xprop -spy -root _NET_ACTIVE_WINDOW | sed -un 's/.*\(0x.*\)/\1/p' > ${fifo} &
 barista_out()
 {
     title=$(xprop -id $1 | awk '/_NET_WM_NAME/{$1=$2="";print}' | cut -d'"' -f2)
-    echo "window:"
-    echo "    text: $title"
     cat <<EOF
 window:
-    text: $title
+    text: >
+        $title
 EOF
 }
 
