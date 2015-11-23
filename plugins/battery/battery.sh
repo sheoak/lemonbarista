@@ -22,9 +22,7 @@ now=`cat /sys/class/power_supply/BAT0/energy_now`
 full=`cat /sys/class/power_supply/BAT0/energy_full`
 charge=`echo $now/$full*100 | bc -l`
 
-if [ -z $present ] || ([ $hidefull -eq "0" ] && [ 1 -eq $(echo "$charge > 100" | bc) ]); then
-    echo "battery:"
-    echo "    disabled: true"
+if [ -z $present ] || ([ $hidefull -eq "1" ] && [ 1 -eq $(echo "$charge > 100" | bc) ]); then
     exit
 fi
 
