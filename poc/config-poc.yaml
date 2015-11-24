@@ -4,22 +4,22 @@ settings:
     default_tick: 10
 
 colors:
-    black: #073642
-    grey: #002b36
-    red: #dc322f
-    lightred: #cb4b16
-    green: #859900
-    lightgreen: #586e75
-    yellow: #b58900
-    lightyellow: #657b83
-    blue: #268bd2
-    lightblue: #839496
-    magenta: #d33682
-    lightmagenta: #6c71c4
-    cyan: #2aa198
-    lightcyan: #93a1a1
-    #white: #eee8d5
-    white: #fdf6e3
+    black: '#073642'
+    grey: '#002b36'
+    red: '#dc322f'
+    lightred: '#cb4b16'
+    green: '#859900'
+    lightgreen: '#586e75'
+    yellow: '#b58900'
+    lightyellow: '#657b83'
+    blue: '#268bd2'
+    lightblue: '#839496'
+    magenta: '#d33682'
+    lightmagenta: '#6c71c4'
+    cyan: '#2aa198'
+    lightcyan: '#93a1a1'
+    #white: '#eee8d5'
+    white: '#fdf6e3'
 
 styles:
     default:
