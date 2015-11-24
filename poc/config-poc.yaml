@@ -95,13 +95,13 @@ plugins:
             tick: 60
             icon: clock
             options:
-                command: date '%a %d %b %Y'
+                command: date +'%a %d %b'
 
         time:
             plugin: command
             tick: 2
             style: flashy
             options:
-                command: date '%H:%M'
+                command: date +'%H:%M'
 
 
